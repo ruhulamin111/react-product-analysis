@@ -48,7 +48,6 @@ const LineChart = () => {
             <YAxis></YAxis>
             <Tooltip></Tooltip>
         </LineChart>
-
     );
 };
 

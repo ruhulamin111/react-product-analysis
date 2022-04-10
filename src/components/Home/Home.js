@@ -1,8 +1,8 @@
 import React from 'react';
-import Comment from '../Comment/Comment';
 import './Home.css'
 
 const Home = () => {
+
     return (
         <div>
             <div className='d-flex align-items-center body justify-content-evenly'>
@@ -17,12 +17,9 @@ const Home = () => {
             </div>
             <div>
                 <button className='btn-primary p-2 rounded-pill border-0'>See All Reviews</button>
-                <div>
 
-                </div>
 
             </div>
-
         </div>
     );
 };
