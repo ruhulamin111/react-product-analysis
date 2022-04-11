@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { Route } from 'react-router-dom';
+import { Link, Route, useNavigate } from 'react-router-dom';
 import useComments from "../../hooks/useComment";
 import DisplayComment from '../Comment/DisplayComment';
+import Review from '../Review/Review';
 import './Home.css'
 
 
 const Home = () => {
     const [comments, setComments] = useComments();
-
-
+    const navigate = useNavigate()
 
     return (
         <div>
@@ -23,10 +23,10 @@ const Home = () => {
                 </div>
             </div>
             <div>
-                <button className='btn-primary p-2 rounded-pill border-0' >See All Reviews</button>
+                <button onClick={() => navigate("/reviews")} className='btn-primary p-2 rounded-pill border-0' >See All Reviews</button>
 
                 <div className='comment-area'>{
-                    comments.map(comment => <DisplayComment
+                    comments.slice(0, 3).map(comment => <DisplayComment
                         key={comment.id}
                         comment={comment}
                     ></DisplayComment>)
