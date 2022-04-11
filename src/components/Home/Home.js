@@ -23,8 +23,7 @@ const Home = () => {
                 </div>
             </div>
             <div>
-                <button onClick={() => navigate("/reviews")} className='btn-primary p-2 rounded-pill border-0' >See All Reviews</button>
-
+                <h2>Client Reviews</h2>
                 <div className='comment-area'>{
                     comments.slice(0, 3).map(comment => <DisplayComment
                         key={comment.id}
@@ -32,6 +31,7 @@ const Home = () => {
                     ></DisplayComment>)
                 }
                 </div>
+                <button onClick={() => navigate("/reviews")} className='btn-primary p-2 rounded-pill border-0' >See All Reviews</button>
             </div>
         </div>
     );
