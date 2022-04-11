@@ -1,27 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import Comment from '../Comment/Comment';
+import useComments from "../../hooks/useComment";
+import DisplayComment from "../Comment/DisplayComment";
+import './Review.css'
+
 
 const Review = () => {
-
-    const [comments, setComments] = useState([])
-
-    useEffect(() => {
-        fetch('comment.json')
-            .then(res => res.json())
-            .then(data => setComments(data))
-    }, [comments])
+    const [comments, setComments] = useComments()
 
     return (
-        <div>
-            <h3>This is Review</h3>
+        <div className="comment-area ">
             {
-                comments.map(comment =>
-                    <Comment
-                        key={comment.id}
-                        comment={comment}
-                    ></Comment>)
+                comments.map(comment => <DisplayComment
+                    key={comment.id}
+                    comment={comment}
+                ></DisplayComment>)
             }
-
         </div>
     );
 };

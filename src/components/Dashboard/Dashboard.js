@@ -44,7 +44,6 @@ const Dashboard = () => {
 
     return (
         <div>
-            <h3>This is Dashboard</h3>
             <LineChart width={800} height={500} data={data} >
                 <Line dataKey={'investment'}></Line>
                 <Line dataKey={'revenue'}></Line>

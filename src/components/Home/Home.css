@@ -1,4 +1,10 @@
-.body img{
+.body img {
     width: 80%;
     border-radius: 20px;
+}
+
+.comment-area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 20px;
 }

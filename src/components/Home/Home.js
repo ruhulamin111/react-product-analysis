@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Route } from 'react-router-dom';
+import useComments from "../../hooks/useComment";
+import DisplayComment from '../Comment/DisplayComment';
 import './Home.css'
 
+
 const Home = () => {
+    const [comments, setComments] = useComments();
+
+
 
     return (
         <div>
@@ -16,9 +23,15 @@ const Home = () => {
                 </div>
             </div>
             <div>
-                <button className='btn-primary p-2 rounded-pill border-0'>See All Reviews</button>
+                <button className='btn-primary p-2 rounded-pill border-0' >See All Reviews</button>
 
-
+                <div className='comment-area'>{
+                    comments.map(comment => <DisplayComment
+                        key={comment.id}
+                        comment={comment}
+                    ></DisplayComment>)
+                }
+                </div>
             </div>
         </div>
     );
