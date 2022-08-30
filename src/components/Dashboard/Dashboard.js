@@ -44,6 +44,7 @@ const Dashboard = () => {
 
     return (
         <div>
+            <h2 className='text-center my-2 text-info fw-bold '>Line Chart</h2>
             <LineChart width={800} height={500} data={data} >
                 <Line dataKey={'investment'}></Line>
                 <Line dataKey={'revenue'}></Line>
@@ -51,7 +52,7 @@ const Dashboard = () => {
                 <YAxis></YAxis>
                 <Tooltip></Tooltip>
             </LineChart>
-
+            <h2 className='text-center my-2 text-info fw-bold '>Bar Chart</h2>
             <BarChart width={800} height={500} data={data} >
                 <Bar dataKey="investment" ></Bar>
                 <Bar dataKey={"revenue"}></Bar>

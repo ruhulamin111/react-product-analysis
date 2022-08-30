@@ -10,7 +10,7 @@ const Header = () => {
     }
 
     return (
-        <nav className='py-3'>
+        <nav className='py-4 text-center'>
             <NavLink style={active} to="/home">Home</NavLink>
             <NavLink style={active} to="/reviews">Reviews</NavLink>
             <NavLink style={active} to="/dashboard">Dashboard</NavLink>
