@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
-import { Link, Route, useNavigate } from 'react-router-dom';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import useComments from "../../hooks/useComment";
 import DisplayComment from '../Comment/DisplayComment';
-import Review from '../Review/Review';
 import './Home.css'
 
 
 const Home = () => {
-    const [comments, setComments] = useComments();
+    const [comments] = useComments();
     const navigate = useNavigate()
 
     return (

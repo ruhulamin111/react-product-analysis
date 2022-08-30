@@ -4,7 +4,7 @@ import './Review.css'
 
 
 const Review = () => {
-    const [comments, setComments] = useComments()
+    const [comments] = useComments()
 
     return (
         <div className="comment-area ">
