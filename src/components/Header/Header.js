@@ -1,15 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Header.css'
 
 const Header = () => {
+    const active = ({ isActive }) => {
+        return {
+            color: isActive ? 'green' : '',
+        }
+    }
+
     return (
-        <nav className='my-3'>
-            <Link to="/home">Home</Link>
-            <Link to="/reviews">Reviews</Link>
-            <Link to="/dashboard">Dashboard</Link>
-            <Link to="/blogs">Blogs</Link>
-            <Link to="/about">About</Link>
+        <nav className='py-3'>
+            <NavLink style={active} to="/home">Home</NavLink>
+            <NavLink style={active} to="/reviews">Reviews</NavLink>
+            <NavLink style={active} to="/dashboard">Dashboard</NavLink>
+            <NavLink style={active} to="/blogs">Blogs</NavLink>
+            <NavLink style={active} to="/about">About</NavLink>
         </nav >
     );
 };
